@@ -3,9 +3,21 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Door
     - Enemy
+    - Key
+    - NavigationEnemy
     - Player
+    - Player2
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -36,25 +48,51 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
+      Script: {instanceID: 0}
+    - Class: 111
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11830}
     - Class: 114
       Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 13790}
+      Script: {instanceID: 13144}
+    - Class: 114
+      Script: {instanceID: 13202}
+    - Class: 114
+      Script: {instanceID: 13288}
+    - Class: 114
+      Script: {instanceID: 13796}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -311,6 +349,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 5b8d2ba5cade3164c450b67b91ee53da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player2
+  - hash:
+      serializedVersion: 2
       Hash: f7bb6096199e0cf058d5d69878184cf4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -335,6 +379,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: e4019848520b71c2d3156ba727c482ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NavigationEnemy
+  - hash:
+      serializedVersion: 2
       Hash: 87ad3705a58f19c47136728d4a6e9c47
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -357,6 +407,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Key
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -498,5 +554,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "D:/\u0418\u0433\u0440\u0430 \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442/\u0432\u0435\u0440\u0441\u0438\u0438/3\u0439
+  playerPath: "D:/\u0418\u0433\u0440\u0430 \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442/\u0432\u0435\u0440\u0441\u0438\u0438/6\u0439
     \u0443\u0440\u043E\u043A/GeekBrains1LABIRINTE.exe"
