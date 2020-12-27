@@ -1,21 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Door : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private int countKey = 0;
+    [SerializeField] private TextMeshProUGUI myText;
+    public GameObject Canvas;
+    private string myTextstr;
+    private int key;
     private bool open = false;
 
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log(other.gameObject.name);
+        if(other.tag == "Player")
+        {
+            Canvas.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Canvas.SetActive(false);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && other.gameObject.GetComponent<Player2>().GetKey() == countKey)
+        myTextstr = key + "/" + countKey;
+        myText.text = myTextstr;
+
+        if (other.tag == "Player" && key == countKey)
         {
             Debug.Log("Открыто!");
             open = true;
         }
-        else if (other.tag == "Player" && other.gameObject.GetComponent<Player2>().GetKey() != countKey)
+        else if (other.tag == "Player" && key != countKey)
         {
             Debug.Log("Не хватает ключей!");
         }
@@ -28,6 +54,9 @@ public class Door : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        key = player.GetComponent<Player2>().GetKey();
+
         if (open)
         {
             transform.Translate(0, Time.deltaTime, 0);

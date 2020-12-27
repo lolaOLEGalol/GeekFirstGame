@@ -88,8 +88,5 @@ public class Player2 : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("is_walk", false);
         }
-
-
-
     }
 }
