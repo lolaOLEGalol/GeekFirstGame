@@ -14,6 +14,8 @@ public class Door : MonoBehaviour
     private int key;
     private bool open = false;
 
+    [SerializeField] private AudioSource openDoor;
+
     private void OnTriggerStay(Collider other)
     {
         Debug.Log(other.gameObject.name);
@@ -39,6 +41,7 @@ public class Door : MonoBehaviour
         if (other.tag == "Player" && key == countKey)
         {
             Debug.Log("Открыто!");
+            openDoor.Play();
             open = true;
         }
         else if (other.tag == "Player" && key != countKey)

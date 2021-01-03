@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Key
   - checkEnemy
+  - checkEnemuSound
   layers:
   - Default
   - TransparentFX

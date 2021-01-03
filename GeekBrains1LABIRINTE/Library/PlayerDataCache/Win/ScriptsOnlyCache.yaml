@@ -5,10 +5,13 @@ ScriptsOnlyBuild:
     - ButtonMenu
     - Door
     - Enemy
+    - Esc
+    - Finish
     - Key
     - KeyRotate
     - Light
     - Menu
+    - Music
     - NavigationEnemy
     - Player
     - Player2
@@ -23,8 +26,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -55,6 +60,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -70,11 +79,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 14116}
+      Script: {instanceID: 14120}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -108,6 +117,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -125,19 +138,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13382}
+      Script: {instanceID: 13234}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13386}
     - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13884}
+      Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 14116}
+      Script: {instanceID: 13888}
     - Class: 114
-      Script: {instanceID: 14138}
+      Script: {instanceID: 14120}
+    - Class: 114
+      Script: {instanceID: 14142}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -183,6 +198,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -210,25 +229,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12610}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 12976}
     - Class: 114
-      Script: {instanceID: 13382}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13334}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13386}
     - Class: 114
-      Script: {instanceID: 13512}
+      Script: {instanceID: 13394}
     - Class: 114
-      Script: {instanceID: 13624}
+      Script: {instanceID: 13488}
     - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13516}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13628}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 14116}
+      Script: {instanceID: 13806}
+    - Class: 114
+      Script: {instanceID: 14040}
+    - Class: 114
+      Script: {instanceID: 14120}
+    - Class: 114
+      Script: {instanceID: 24454}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -243,9 +268,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 167
+      Script: {instanceID: 0}
     - Class: 195
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -512,7 +543,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 7a2e495996c71a4aa2e50a3999e1b774
+      Hash: b175b013345099a1244bac9268aeb2e7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonMenu
@@ -554,7 +585,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 01d607bec2925068877058736cf50d24
+      Hash: 69d7ff98367a29672c8f27ea227837ca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
@@ -570,6 +601,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 5c320812b7c9fc525d460866c672974a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Esc
   - hash:
       serializedVersion: 2
       Hash: a53651ee3996fbba20dfe0fce02f0b23
@@ -608,13 +645,19 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 719eda071d32c5db3e09395f44043d24
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Music
+  - hash:
+      serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 5b8d2ba5cade3164c450b67b91ee53da
+      Hash: 168d3f03ca18c429cdc1f52dd661be97
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player2
@@ -644,7 +687,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 58e699380fde8e05ce4907c281c378f4
+      Hash: 508c8f965130b864ee0c14cb2f93d7b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NavigationEnemy
@@ -674,7 +717,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 83e769eee07fc231384c812eedbb8224
+      Hash: cab62c8d0608933e38dd90ea866ce91f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Key
@@ -710,7 +753,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: de00113d7819349bcbd6d33c48ea106b
+      Hash: 97507bd17e9790a33fae7ce4c584adbc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Book
@@ -770,7 +813,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 3bcbc78e34b81d960ba0abac9ae89c1b
+      Hash: a51f944f00aa649b3b4f48b9ab4c2070
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Door
@@ -846,10 +889,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: af04ff2397aa7a4321a4ffa387cced20
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Finish
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/lvl.unity
   - Assets/Scenes/Death.unity
-  playerPath: "D:/\u0418\u0433\u0440\u0430 \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442/\u0432\u0435\u0440\u0441\u0438\u0438/7\u0439
+  playerPath: "D:/\u0418\u0433\u0440\u0430 \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442/\u0432\u0435\u0440\u0441\u0438\u0438/8\u0439
     \u0443\u0440\u043E\u043A/GeekBrains1LABIRINTE.exe"

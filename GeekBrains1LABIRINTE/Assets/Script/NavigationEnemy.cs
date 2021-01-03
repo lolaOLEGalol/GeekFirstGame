@@ -16,6 +16,9 @@ public class NavigationEnemy : MonoBehaviour
     [SerializeField] private GameObject CanvasRun;
     [SerializeField] private GameObject TextRun;
 
+    [SerializeField] private AudioSource atack;
+    [SerializeField] private AudioSource walf;
+
 
 
 
@@ -23,6 +26,7 @@ public class NavigationEnemy : MonoBehaviour
     {
         GetComponent<NavMeshAgent>().SetDestination(finishPoint.position);
         waitPatrul = timePatrul;
+        MigalkaRunTrue();
     }
 
     private void MigalkaRunTrue()
@@ -37,6 +41,20 @@ public class NavigationEnemy : MonoBehaviour
         Invoke("MigalkaRunTrue", 0.7f);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "checkEnemy")
+        {
+            CanvasRun.SetActive(true);
+            atack.Play();
+        }
+
+        if (other.tag == "checkEnemuSound")
+        {
+            walf.Play();
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "checkEnemy")
@@ -44,8 +62,6 @@ public class NavigationEnemy : MonoBehaviour
             GetComponent<Animator>().SetBool("is_walk", false);
             Debug.Log("УВИДЕЛ ИГРОКА!");
 
-            CanvasRun.SetActive(true);
-            MigalkaRunTrue();
 
             GetComponent<Animator>().SetBool("is_run", true);
             GetComponent<NavMeshAgent>().speed = 5;
@@ -84,7 +100,15 @@ public class NavigationEnemy : MonoBehaviour
             GetComponent<Animator>().SetBool("is_walk", true);
             GetComponent<NavMeshAgent>().speed = 2;
             GetComponent<NavMeshAgent>().SetDestination(startPoint.position);
+
+            atack.Stop();
         }
+
+        if (other.tag == "checkEnemuSound")
+        {
+            walf.Stop();
+        }
+
     }
 
     

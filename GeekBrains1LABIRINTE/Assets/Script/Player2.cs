@@ -12,6 +12,9 @@ public class Player2 : MonoBehaviour
     private float mouseGorizontal;
     public int key;
 
+    [SerializeField] private AudioSource boo;
+    [SerializeField] private AudioSource step;
+
     private void Awake()
     {
         key = 0;
@@ -88,5 +91,18 @@ public class Player2 : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("is_walk", false);
         }
+    }
+
+
+
+
+    public void SourceBook()
+    {
+        boo.Play();
+    }
+
+    public void EventSource()
+    {
+        step.Play();
     }
 }

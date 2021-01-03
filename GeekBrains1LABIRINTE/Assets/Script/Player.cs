@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public float jump = 3f;
 
     [SerializeField] private int key = 0;
+    
+
 
     private void Rotate()
     {
@@ -148,4 +150,9 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("is_idle", true);
         }
     }
+
+
+
+    
+
 }

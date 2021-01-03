@@ -13,6 +13,8 @@ public class ButtonMenu : MonoBehaviour
     [SerializeField] private GameObject canvasSettings;
     [SerializeField] private GameObject canvas;
 
+    [SerializeField] private AudioSource btnSource;
+
     [SerializeField] private Toggle toggleMusic;
 
     private void Awake()
@@ -28,17 +30,23 @@ public class ButtonMenu : MonoBehaviour
 
     public void Back()
     {
+        btnSource.Play();
+
         canvasSettings.SetActive(false);
         canvas.SetActive(true);
     }
 
     public void Play()
     {
+        btnSource.Play();
+
         SceneManager.LoadScene(1);
     }
 
     public void Settings()
     {
+        btnSource.Play();
+
         Debug.Log("Привет, я работаю!");
         canvas.SetActive(false);
         canvasSettings.SetActive(true);
@@ -46,6 +54,8 @@ public class ButtonMenu : MonoBehaviour
 
     public void Quit()
     {
+        btnSource.Play();
+
         Application.Quit();
     }
 
@@ -63,6 +73,7 @@ public class ButtonMenu : MonoBehaviour
         }
         
     }
+
 
     
 }
